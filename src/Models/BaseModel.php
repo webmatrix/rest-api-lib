@@ -105,7 +105,7 @@ class BaseModel extends Model {
 
         if($s===':isNULL'){
           $query= $query->whereNull($field);
-          break;
+          return;
         }
 
         $q->where($column_value,$o,$prefsuf.str_replace($s,'', $value).$prefsuf);
@@ -141,7 +141,7 @@ class BaseModel extends Model {
 
               if($s===':isNULL'){
                 $query= $query->whereNull($field);
-                break;
+                return;
               }
 
               //If field has no dot notation we filter just the main table
@@ -155,7 +155,7 @@ class BaseModel extends Model {
 
             }
 
-            break;
+            return;
           }
         }
       }
