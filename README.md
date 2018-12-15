@@ -1,2 +1,2 @@
-# api-lib
+# rest-api-lib
 Library for REST API
